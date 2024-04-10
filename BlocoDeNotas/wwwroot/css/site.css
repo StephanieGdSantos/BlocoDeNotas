@@ -1,0 +1,100 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+a:hover{
+    color: white;
+}
+
+.convite {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+.formulario {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.login {
+    background: #FAEFC2;
+    box-shadow: 7px 8px 6px 0px #5d4c304a;
+}
+
+.cadastro {
+    background: #D7D9FA;
+    box-shadow: 7px 8px 6px 0px #5d4c304a;
+}
+
+.conteudo-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botao-enter {
+    background: #5D4C30;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 32px;
+    border-radius: 5px;
+}
+
+.titulo-input {
+    color: #5D4C30;
+    font-size: 10pt;
+}
+
+.titulo-login {
+    display: flex;
+    justify-content: center;
+    color: #5D4C30;
+    font-size: 25pt;
+    margin-bottom: 14%;
+}
+
+.titulo-logo {
+    font-size: 28pt;
+    color: #5D4C30;
+}
+
+.botao-convite {
+    background: #C8B699;
+    width: 60%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+}

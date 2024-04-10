@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Cadastre-se";
+}
+<style>
+    body {
+        background-image: url(../img/fundoFolha.png);
+        background-repeat: repeat;
+        background-size: contain;
+        width: 100%;
+    }
+
+    html {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #5D4C30;
+    }
+
+    main.pb-3 {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: #5D4C30;
+    }
+</style>
+<div class="formulario cadastro">
+    <div class="convite login">
+        <div class="d-flex flex-column justify-content-center" style="margin-top: 12%;gap: 50px;">
+            <div class="d-flex flex-column justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <img src="../img/logotipo.png" alt="Alternate Text" style="width: 40%" />
+                </div>
+                <h3 class="titulo-logo d-flex justify-content-center">NoteNest</h3>
+            </div>
+            <div class="btn-titulo-convite d-flex flex-column justify-content-center">
+                <label class="d-flex justify-content-center" style="color: #5D4C30">Já possui conta?</label>
+                <a class="botao-convite" asp-controller="Notas" asp-action="Index">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column w-50 justify-content-center">
+        <h3 class="titulo-login">Cadastre-se</h3>
+        <div class="conteudo-formulario">
+            <form class="d-flex flex-column w-75">
+                <div class="d-flex flex-column gap-3">
+                    <div class="d-flex flex-column">
+                        <label for="nome" class="titulo-input">Nome:</label>
+                        <input type="text" class="border rounded-3 border-secondary" id="nome" placeholder="Luiza Alves Souza">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <label for="email" class="titulo-input">E-mail:</label>
+                        <input type="email" class="border rounded-3 border-secondary" id="email" placeholder="luizaalves@gmail.com">
+                    </div>
+                    <div class="d-flex flex-column">
+                        <label for="senha" class="titulo-input">Senha:</label>
+                        <input type="password" class="border rounded-3 border-secondary" id="senha" placeholder="*********">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center" style="margin-top: 25px;">
+                    <button type="submit" class="botao-enter">Criar conta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
