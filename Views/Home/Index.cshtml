@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    body{
+        background-image: url(img/fundoFolha.png);
+        background-repeat: repeat;
+        background-size: contain;
+        width: 100%;
+    }
+    html{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        color: #5D4C30;
+    }
+
+    main.pb-3 {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: #5D4C30;
+    }
+</style>
+<!--<div class="text-center">-->
+<div class="formulario login">
+
+    <div class="convite cadastro">
+        <div class="d-flex flex-column justify-content-center" style="margin-top: 12%;gap: 50px;">
+            <div class="d-flex flex-column justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <img src="img/logotipo.png" alt="Alternate Text"  style="width: 40%"/>
+                </div>
+                <h3 class="titulo-logo d-flex justify-content-center">NoteNest</h3>
+            </div>
+            <div class="btn-titulo-convite d-flex flex-column justify-content-center">
+                <label class="d-flex justify-content-center" style="color: #5D4C30">Ainda não possui conta?</label>
+                <a href="" class="botao-convite">Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column w-50">
+        <h3 class="titulo-login">Login</h3>
+        <div class="conteudo-formulario">
+            <form class="d-flex flex-column w-75">
+                <div class="d-flex flex-column">
+                    <div class="mb-3 d-flex flex-column">
+                        <label for="emailLogin" class="titulo-input">E-mail:</label>
+                        <input type="email" class="border rounded-3 border-secondary" id="emailLogin" placeholder="luizaalves@gmail.com">
+                    </div>
+                    <div class="mb-3 d-flex flex-column">
+                        <label for="senhaLogin" class="titulo-input">Senha:</label>
+                        <input type="password" class="border rounded-3 border-secondary" id="senhaLogin" placeholder="*********">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center" style="margin-top: 25px;">
+                        <button type="submit" class="botao-enter">Entrar</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+<!--</div>-->
