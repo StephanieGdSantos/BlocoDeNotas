@@ -8,6 +8,10 @@ html {
     }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #5D4C30;
+}
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
     box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
@@ -99,8 +103,9 @@ a:hover {
     display: flex;
     justify-content: space-between;
     background: #D7D9FA;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 5px 50px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
     height: 25%;
     width: 87%;
     border-radius: 0 0 0 15px;
@@ -134,9 +139,9 @@ a:hover {
     cursor: pointer;
 }
 
-.btn-nova-nota:hover {
-    color: #5D4C30;
-}
+    .btn-nova-nota:hover {
+        color: #5D4C30;
+    }
 
 .input-nota {
     border: solid 2px #5D4C30;
@@ -144,15 +149,15 @@ a:hover {
     resize: none;
 }
 
-.h-ipt-preview{
+.h-ipt-preview {
     height: 180px;
 }
 
-.w-preview{
+.w-preview {
     width: 45%;
 }
 
-.h-ipt-nova-nota{
+.h-ipt-nova-nota {
     height: 250px;
 }
 
@@ -171,9 +176,9 @@ a:hover {
     font-weight: bold;
 }
 
-.input-nota:focus, .input-titulo:focus {
-    outline: none;
-}
+    .input-nota:focus, .input-titulo:focus {
+        outline: none;
+    }
 
 .preview-nota {
     display: flex;
@@ -194,9 +199,14 @@ a:hover {
 }
 
 .voltar {
+    font-weight: bold;
     color: #5D4C30;
 }
 
 .voltar:hover {
+    color: #5D4C30;
+}
+
+.texto-marrom {
     color: #5D4C30;
 }

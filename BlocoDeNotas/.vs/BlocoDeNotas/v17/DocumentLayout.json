@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\views\\notas\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:views\\notas\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\views\\notas\\novanota.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:views\\notas\\novanota.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\views\\notas\\novanota.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:views\\notas\\novanota.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +26,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAABcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-12T16:04:45.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Home.cshtml",
               "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Notas\\Home.cshtml",
               "RelativeDocumentMoniker": "Views\\Notas\\Home.cshtml",
               "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Notas\\Home.cshtml",
               "RelativeToolTip": "Views\\Notas\\Home.cshtml",
-              "ViewState": "AQIAACYAAAAAAAAAAAAAADUAAAAoAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-12T14:47:56.411Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "NovaNota.cshtml",
               "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Notas\\NovaNota.cshtml",
               "RelativeDocumentMoniker": "Views\\Notas\\NovaNota.cshtml",
@@ -47,20 +64,20 @@
               "RelativeToolTip": "Views\\Notas\\NovaNota.cshtml",
               "ViewState": "AQIAABIAAAAAAAAAAAAAABYAAABKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-12T13:41:38.822Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-12T13:41:38.822Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
-              "ViewState": "AQIAALcAAAAAAAAAAAAAAMQAAAAEAAAA",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAAAM4AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-10T19:47:31.583Z"
+              "WhenOpened": "2024-04-10T19:47:31.583Z",
+              "EditorCaption": ""
             }
           ]
         }
