@@ -13,15 +13,17 @@ html {
 }
 
 html {
-    position: relative;
-    min-height: 100%;
+    /* position: relative; */
+    /* min-height: 100vh; */
 }
 
 body {
-    margin-bottom: 60px;
+    /* margin-bottom: 60px; */
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-a:hover{
+a:hover {
     color: white;
 }
 
@@ -97,4 +99,88 @@ a:hover{
     color: white;
     border-radius: 5px;
     margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #D7D9FA;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 25%;
+    width: 87%;
+    border-radius: 0 0 0 15px;
+}
+
+.visao-notas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    gap: 15px;
+    padding: 30px;
+    background: #FAEFC2;
+    border-radius: 5px;
+    box-shadow: rgb(93 76 48 / 47%) 4px 4px 6px 0px;
+}
+
+.btn-nova-nota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 170px;
+    color: #5D4C30;
+    background: #D7D9FA;
+    font-size: 14pt;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgb(93 76 48 / 47%) 2px 3px 6px 0px;
+    flex-direction: row;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-nova-nota:hover {
+    color: #5D4C30;
+}
+
+.input-nota {
+    border: solid 2px #5D4C30;
+    background: transparent;
+    height: 180px;
+    resize: none;
+}
+
+.input-titulo {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #5D4C30;
+    background: transparent;
+    color: #5D4C30;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.input-nota:focus, .input-titulo:focus{
+    outline: none;
+}
+
+.preview-nota {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FAEFC2;
+    color: #5D4C30;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: rgb(93 76 48 / 47%) 4px 4px 6px 0px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.preview-nota:hover {
+    color: #5D4C30;
+
 }
