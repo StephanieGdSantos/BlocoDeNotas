@@ -116,7 +116,6 @@ a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 45%;
     gap: 15px;
     padding: 30px;
     background: #FAEFC2;
@@ -148,8 +147,23 @@ a:hover {
 .input-nota {
     border: solid 2px #5D4C30;
     background: transparent;
-    height: 180px;
     resize: none;
+}
+
+.h-ipt-preview{
+    height: 180px;
+}
+
+.w-preview{
+    width: 45%;
+}
+
+.h-ipt-nova-nota{
+    height: 100%;
+}
+
+.w-nova-nota {
+    width: 80%;
 }
 
 .input-titulo {
@@ -163,7 +177,7 @@ a:hover {
     font-weight: bold;
 }
 
-.input-nota:focus, .input-titulo:focus{
+.input-nota:focus, .input-titulo:focus {
     outline: none;
 }
 
@@ -178,9 +192,9 @@ a:hover {
     box-shadow: rgb(93 76 48 / 47%) 4px 4px 6px 0px;
     cursor: pointer;
     text-decoration: none;
+    height: 50px;
 }
 
 .preview-nota:hover {
     color: #5D4C30;
-
 }

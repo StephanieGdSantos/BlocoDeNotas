@@ -17,24 +17,24 @@
       "PackagePath": "staticwebassets\\img\\fundoFolha.png"
     },
     {
-      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-add.png",
-      "PackagePath": "staticwebassets\\img\\icon-add.png"
+      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-add.svg",
+      "PackagePath": "staticwebassets\\img\\icon-add.svg"
     },
     {
-      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-lixeira.png",
-      "PackagePath": "staticwebassets\\img\\icon-lixeira.png"
+      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-lixeira.svg",
+      "PackagePath": "staticwebassets\\img\\icon-lixeira.svg"
     },
     {
-      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-seta.png",
-      "PackagePath": "staticwebassets\\img\\icon-seta.png"
+      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-seta.svg",
+      "PackagePath": "staticwebassets\\img\\icon-seta.svg"
     },
     {
-      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\logo.png",
-      "PackagePath": "staticwebassets\\img\\logo.png"
+      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\logotipo.svg",
+      "PackagePath": "staticwebassets\\img\\logotipo.svg"
     },
     {
-      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\logotipo.png",
-      "PackagePath": "staticwebassets\\img\\logotipo.png"
+      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\seta-voltar.svg",
+      "PackagePath": "staticwebassets\\img\\seta-voltar.svg"
     },
     {
       "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\js\\site.js",

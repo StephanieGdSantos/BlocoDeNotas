@@ -18,5 +18,10 @@ namespace BlocoDeNotas.Controllers
         {
             return View();
         }
+
+        public IActionResult NovaNota()
+        {
+            return View();
+        }
     }
 }
