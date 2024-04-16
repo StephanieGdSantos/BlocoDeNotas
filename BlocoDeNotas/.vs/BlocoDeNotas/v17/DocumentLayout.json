@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Views\\Usuario\\DadosPessoais.cshtml",
               "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Usuario\\DadosPessoais.cshtml",
               "RelativeToolTip": "Views\\Usuario\\DadosPessoais.cshtml",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAABsAAAAzAAAA",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABYAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-16T19:18:56.363Z",
               "EditorCaption": ""
@@ -47,8 +47,7 @@
               "RelativeToolTip": "Views\\Notas\\Index.cshtml",
               "ViewState": "AQIAAAcAAAAAAAAAAAAAABQAAABXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-16T19:12:22.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T19:12:22.332Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AQIAAN0AAAAAAAAAAAAAAOoAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-16T18:44:14.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T18:44:14.367Z"
             }
           ]
         }
