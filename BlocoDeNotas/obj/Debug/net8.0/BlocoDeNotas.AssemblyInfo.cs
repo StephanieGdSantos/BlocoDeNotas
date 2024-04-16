@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlocoDeNotas")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e24ee0afdafa40448808ae36af4e65a0b971ded1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+340af9d6dbe67a740f7599c8589fb9bb7e89cab9")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlocoDeNotas")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlocoDeNotas")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

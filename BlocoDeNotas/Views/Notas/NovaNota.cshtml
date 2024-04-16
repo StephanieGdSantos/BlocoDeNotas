@@ -9,11 +9,18 @@
         <div class="d-flex justify-content-center" style="flex: 1;">
             <img src="../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
         </div>
+
         <div class="navbar">
-            <h5>Home</h5>
-            <div class="d-flex align-items-center gap-3">
-                <h5>Olá, Stephanie</h5>
-                <img src="../img/icon-seta.svg" style="width: 10%;height: 10%;" />
+            <a class="fw-bold fs-5 text-decoration-none texto-marrom btn">Home</a>
+
+            <div class="d-flex align-items-center position-relative" style="cursor: pointer;gap: 0.5rem;" onclick="MostrarOpcoes()">
+                <p class="d-flex mb-0 fw-bold fs-5 texto-marrom">Olá, Stephanie</p>
+                <img src="../img/icon-seta.svg" style="margin-top: 0.2rem; width: 8%;">
+
+                <div class="opcoes texto-marrom mostrar" id="opcoes">
+                    <a>Dados pessoais</a>
+                    <a>Sair</a>
+                </div>
             </div>
         </div>
     </div>
@@ -26,8 +33,8 @@
 
     <div class="d-flex justify-content-center">
             <form class="visao-notas w-nova-nota">
-                <input type="text" name="titulo" value="" class="input-titulo" />
-                <textarea class="input-nota h-ipt-nova-nota"></textarea>
+                <input type="text" name="titulo" class="input-titulo" placeholder="Título aqui"/>
+                <textarea class="input-nota h-ipt-nova-nota" placeholder="Anotações aqui..."></textarea>
                 <div class="d-flex justify-content-between">
                 <button class="text-decoration-underline bg-transparent border-0" style="color: #5D4C30;" type="reset">Limpar</button>
                 <button type="submit" class="btn w-25 text-white" style="background: #5D4C30;">Salvar</button>

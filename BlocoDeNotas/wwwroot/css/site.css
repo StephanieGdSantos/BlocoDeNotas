@@ -103,7 +103,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     background: #D7D9FA;
-    padding: 5px 50px;
+    padding: 15px 50px;
     /* padding-left: 20px; */
     /* padding-right: 20px; */
     height: 25%;
@@ -147,6 +147,7 @@ a:hover {
     border: solid 2px #5D4C30;
     background: transparent;
     resize: none;
+    padding: 5px 10px;
 }
 
 .h-ipt-preview {
@@ -174,6 +175,7 @@ a:hover {
     color: #5D4C30;
     font-size: 20px;
     font-weight: bold;
+    padding-left: 10px;
 }
 
     .input-nota:focus, .input-titulo:focus {
@@ -194,19 +196,47 @@ a:hover {
     height: 50px;
 }
 
-.preview-nota:hover {
-    color: #5D4C30;
-}
+    .preview-nota:hover {
+        color: #5D4C30;
+    }
 
 .voltar {
     font-weight: bold;
     color: #5D4C30;
 }
 
-.voltar:hover {
-    color: #5D4C30;
-}
+    .voltar:hover {
+        color: #5D4C30;
+    }
 
 .texto-marrom {
     color: #5D4C30;
+}
+
+.opcoes {
+    position: absolute;
+    top: 40px;
+    background: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 1rem;
+    visibility: visible;
+    transition: all ease;
+}
+
+    .opcoes a {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+        .opcoes a:hover {
+            background: #D7D9FA
+        }
+
+.mostrar {
+    visibility: hidden;
 }

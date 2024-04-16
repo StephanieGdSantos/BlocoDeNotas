@@ -8,11 +8,16 @@
             <img src="../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
         </div>
         <div class="navbar">
-            <h5>Home</h5>
+            <a class="fw-bold fs-5 text-decoration-none texto-marrom btn">Home</a>
 
-            <div class="d-flex align-items-center gap-3">
-                <h5>Olá, Stephanie</h5>
-                <img src="../img/icon-seta.svg" style="width: 10%;height: 10%;" />
+            <div class="d-flex align-items-center position-relative" style="cursor: pointer;gap: 0.5rem;" onclick="MostrarOpcoes()">
+                <p class="d-flex mb-0 fw-bold fs-5 texto-marrom">Olá, Stephanie</p>
+                <img src="../img/icon-seta.svg" style="margin-top: 0.2rem; width: 8%;">
+
+                <div class="opcoes texto-marrom mostrar" id="opcoes">
+                    <a>Dados pessoais</a>
+                    <a>Sair</a>
+                </div>
             </div>
         </div>
     </div>
