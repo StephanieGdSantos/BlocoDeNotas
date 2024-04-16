@@ -7,3 +7,7 @@ function MostrarOpcoes()
     let opcoes = document.querySelector("#opcoes")
     opcoes.classList.toggle("mostrar")
 }
+
+$('.close-alert').click(function () {
+    $('.alert').hide('hide')
+})
