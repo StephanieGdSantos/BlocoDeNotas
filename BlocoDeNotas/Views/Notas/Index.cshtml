@@ -1,66 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Entrar";
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
 }
-<style>
-    body {
-        background-image: url(img/fundoFolha.png);
-        background-repeat: repeat;
-        background-size: contain;
-        width: 100%;
-    }
 
-    html {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #5D4C30;
-    }
+<div class="d-flex justify-content-end flex-column">
+    <div class="d-flex">
+        <div class="d-flex justify-content-center" style="flex: 1;">
+            <img src="../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
+        </div>
 
-    main.pb-3 {
-        display: flex;
-        justify-content: center;
-    }
+        <div class="navbar">
+            <a asp-controller="Home" asp-action="Index" class="fw-bold fs-5 text-decoration-none texto-marrom btn">Home</a>
 
+            <div class="d-flex align-items-center position-relative" style="cursor: pointer;gap: 0.5rem;" onclick="MostrarOpcoes()">
+                <p class="d-flex mb-0 fw-bold fs-5 texto-marrom">Olá, Stephanie</p>
+                <img src="../img/icon-seta.svg" style="margin-top: 0.2rem; width: 8%;">
 
-    a {
-        text-decoration: none;
-        color: #5D4C30;
-    }
-</style>
-<div class="formulario login" style="margin-top: 50px;">
-    <div class="convite cadastro">
-        <div class="d-flex flex-column justify-content-center" style="margin-top: 12%;gap: 50px;">
-            <div class="d-flex flex-column justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <img src="img/logotipo.svg" alt="Logotipo NoteNest" style="width: 40%" />
+                <div class="opcoes texto-marrom mostrar" id="opcoes">
+                    <a asp-controller="Usuario" asp-action="DadosPessoais" role="button">Dados pessoais</a>
+                    <a>Sair</a>
                 </div>
-                <h3 class="titulo-logo d-flex justify-content-center">NoteNest</h3>
-            </div>
-            <div class="btn-titulo-convite d-flex flex-column justify-content-center">
-                <label class="d-flex justify-content-center" style="color: #5D4C30">Ainda não possui conta?</label>
-                <a class="botao-convite" asp-controller="Notas" asp-action="Cadastrar">Cadastre-se</a>
             </div>
         </div>
     </div>
 
-    <div class="d-flex flex-column w-50 justify-content-center">
-        <h3 class="titulo-login">Login</h3>
-        <div class="conteudo-formulario">
-            <form class="d-flex flex-column w-75">
-                <div class="d-flex flex-column">
-                    <div class="mb-3 d-flex flex-column">
-                        <label for="emailLogin" class="titulo-input">E-mail:</label>
-                        <input type="email" class="border rounded-3 border-secondary" id="emailLogin" placeholder="luizaalves@gmail.com">
-                    </div>
-                    <div class="mb-3 d-flex flex-column">
-                        <label for="senhaLogin" class="titulo-input">Senha:</label>
-                        <input type="password" class="border rounded-3 border-secondary" id="senhaLogin" placeholder="*********">
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center" style="margin-top: 25px;">
-                    <button type="submit" class="botao-enter" asp-controller="Notas" asp-action="Home">Entrar</button>
-                </div>
-            </form>
-        </div>
+    <div class="d-flex" style="padding: 25px 10%;">
+        <a class="d-flex gap-3 text-decoration-none voltar" asp-controller="Notas" asp-action="Home">
+            <img src="../img/seta-voltar.svg" style="width: 30px;" />Voltar
+        </a>
     </div>
+
+    <div class="d-flex justify-content-center">
+        <form class="visao-notas w-nova-nota">
+            <input type="text" name="titulo" class="input-titulo" placeholder="Título aqui" />
+            <textarea class="input-nota h-ipt-nova-nota" placeholder="Anotações aqui..."></textarea>
+            <div class="d-flex justify-content-between">
+                <button class="text-decoration-underline bg-transparent border-0" style="color: #5D4C30;" type="reset">Limpar</button>
+                <button type="submit" class="btn w-25 text-white" style="background: #5D4C30;">Salvar</button>
+            </div>
+        </form>
+    </div>
+
 </div>

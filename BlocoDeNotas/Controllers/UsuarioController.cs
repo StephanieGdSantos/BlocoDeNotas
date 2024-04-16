@@ -8,5 +8,15 @@ namespace BlocoDeNotas.Controllers
         {
             return View();
         }
+
+        public IActionResult Cadastrar()
+        {
+            return View();
+        }
+
+        public IActionResult DadosPessoais()
+        {
+            return View();
+        }
     }
 }

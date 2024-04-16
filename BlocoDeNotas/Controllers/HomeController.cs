@@ -2,7 +2,7 @@
 
 namespace BlocoDeNotas.Controllers
 {
-    public class NotasController : Controller
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {

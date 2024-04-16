@@ -18,20 +18,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\gomes\GITHUB\BlocoDeNotas\BlocoDeNotas
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Notas/Cadastrar.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YXNcQ2FkYXN0cmFyLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Notas/Home.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YXNcSG9tZS5jc2h0bWw=
+[C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Notas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YXNcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Notas/NovaNota.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YXNcTm92YU5vdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Shared/Error.cshtml]
@@ -40,6 +32,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Usuario/Cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDYWRhc3RyYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Usuario/DadosPessoais.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEYWRvc1Blc3NvYWlzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/gomes/GITHUB/BlocoDeNotas/BlocoDeNotas/Views/Usuario/Index.cshtml]

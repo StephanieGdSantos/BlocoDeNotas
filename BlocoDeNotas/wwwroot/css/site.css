@@ -231,10 +231,13 @@ a:hover {
     .opcoes a {
         padding: 10px 20px;
         cursor: pointer;
+        text-decoration: none;
+        color: #5D4C30;
     }
 
         .opcoes a:hover {
-            background: #D7D9FA
+            background: #D7D9FA;
+            color: #5D4C30;
         }
 
 .mostrar {
