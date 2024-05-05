@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\models\\notasmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:models\\notasmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\migrations\\20240416211531_criandobancodedados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:migrations\\20240416211531_criandobancodedados.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:models\\usuariomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\views\\usuario\\cadastrar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:views\\usuario\\cadastrar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -18,11 +34,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NotasModel.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Models\\NotasModel.cs",
+              "RelativeDocumentMoniker": "Models\\NotasModel.cs",
+              "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Models\\NotasModel.cs",
+              "RelativeToolTip": "Models\\NotasModel.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAsAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T19:48:01.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "20240416211531_CriandoBancoDeDados.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Migrations\\20240416211531_CriandoBancoDeDados.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240416211531_CriandoBancoDeDados.cs",
+              "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Migrations\\20240416211531_CriandoBancoDeDados.cs",
+              "RelativeToolTip": "Migrations\\20240416211531_CriandoBancoDeDados.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAswD4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T19:47:48.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsuarioModel.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Models\\UsuarioModel.cs",
+              "RelativeDocumentMoniker": "Models\\UsuarioModel.cs",
+              "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Models\\UsuarioModel.cs",
+              "RelativeToolTip": "Models\\UsuarioModel.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABAAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T19:46:45.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T19:46:43.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Usuario\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Usuario\\Index.cshtml",
@@ -30,12 +98,11 @@
               "RelativeToolTip": "Views\\Usuario\\Index.cshtml",
               "ViewState": "AQIAAD8AAAAAAAAAAAAAAEoAAABgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-16T22:17:45.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-16T22:17:45.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Cadastrar.cshtml",
               "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Usuario\\Cadastrar.cshtml",
               "RelativeDocumentMoniker": "Views\\Usuario\\Cadastrar.cshtml",
