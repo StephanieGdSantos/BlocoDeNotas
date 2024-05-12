@@ -34,23 +34,23 @@ namespace BlocoDeNotas.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Titulo = table.Column<string>(type: "text", nullable: false),
                     Descricao = table.Column<string>(type: "text", nullable: false),
-                    IdUsuario = table.Column<int>(type: "integer", nullable: false)
+                    UsuarioId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Nota", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Nota_Usuario_IdUsuario", // Nome da restrição de chave estrangeira
-                        column: x => x.IdUsuario,
+                        name: "FK_Nota_Usuario_UsuarioId", // Nome da restrição de chave estrangeira
+                        column: x => x.UsuarioId,
                         principalTable: "Usuario",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade); // Defina a ação de exclusão em cascata, se desejado
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Nota_IdUsuario", // Nome do índice deve corresponder ao nome da restrição de chave estrangeira
+                name: "IX_Nota_UsuarioId", // Nome do índice deve corresponder ao nome da restrição de chave estrangeira
                 table: "Nota",
-                column: "IdUsuario");
+                column: "UsuarioId");
         }
 
         /// <inheritdoc />

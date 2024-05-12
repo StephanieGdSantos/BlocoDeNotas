@@ -12,7 +12,7 @@ namespace BlocoDeNotas.Models
         [Required(ErrorMessage = "Digite a descrição da nota.")]
         public string Descricao { get; set; }
         public DateTime DataCriacao { get; set; }
-        public int IdUsuario { get; set; } // Chave estrangeira para a tabela Usuario
+        public int UsuarioId { get; set; } // Chave estrangeira para a tabela Usuario
 
         public UsuarioModel Usuario { get; set; }
     }

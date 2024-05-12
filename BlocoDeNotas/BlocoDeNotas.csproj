@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Repositorio\INotaRepositorio.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\img\fundoFolha.png" />
   </ItemGroup>
 
