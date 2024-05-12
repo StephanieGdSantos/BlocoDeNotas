@@ -1,9 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BlocoDeNotas.Models
 {
     public class NotasModel
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Digite o título da nota.")]
@@ -11,9 +14,9 @@ namespace BlocoDeNotas.Models
 
         [Required(ErrorMessage = "Digite a descrição da nota.")]
         public string Descricao { get; set; }
-        public DateTime DataCriacao { get; set; }
+        public string DataCriacao { get; set; }
         public int UsuarioId { get; set; } // Chave estrangeira para a tabela Usuario
 
-        public UsuarioModel Usuario { get; set; }
+        //public UsuarioModel Usuario { get; set; }
     }
 }

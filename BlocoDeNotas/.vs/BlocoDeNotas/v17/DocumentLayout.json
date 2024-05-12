@@ -5,18 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\views\\notas\\criarnota.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:views\\notas\\criarnota.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\controllers\\notascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:controllers\\notascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\repositorio\\notasrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:repositorio\\notasrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\gomes\\github\\blocodenotas\\blocodenotas\\repositorio\\inotasrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:repositorio\\inotasrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,48 +24,9 @@
               "RelativeDocumentMoniker": "Views\\Notas\\CriarNota.cshtml",
               "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Views\\Notas\\CriarNota.cshtml",
               "RelativeToolTip": "Views\\Notas\\CriarNota.cshtml",
-              "ViewState": "AQIAABcAAAAAAAAAAAAAACIAAAA1AAAA",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAACQAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-12T18:46:44.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NotasController.cs",
-              "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Controllers\\NotasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\NotasController.cs",
-              "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Controllers\\NotasController.cs",
-              "RelativeToolTip": "Controllers\\NotasController.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAADwvycAAABPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-12T18:26:48.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NotasRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Repositorio\\NotasRepositorio.cs",
-              "RelativeDocumentMoniker": "Repositorio\\NotasRepositorio.cs",
-              "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Repositorio\\NotasRepositorio.cs",
-              "RelativeToolTip": "Repositorio\\NotasRepositorio.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAABgAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T21:07:07.467Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "INotasRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Repositorio\\INotasRepositorio.cs",
-              "RelativeDocumentMoniker": "Repositorio\\INotasRepositorio.cs",
-              "ToolTip": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\Repositorio\\INotasRepositorio.cs",
-              "RelativeToolTip": "Repositorio\\INotasRepositorio.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T21:06:55.175Z",
               "EditorCaption": ""
             }
           ]

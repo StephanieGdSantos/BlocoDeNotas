@@ -24,6 +24,22 @@
     </div>
 
     <div class="d-flex flex-column" style="padding: 40px 100px; gap: 30px;">
+        @if (TempData["mensagemSucesso"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                <button type="button" class="btn btn-success btn-sm close-alert" arial-label="Close">X</button>
+                @TempData["mensagemSucesso"]
+            </div>
+        }
+
+        @if (TempData["mensagemErro"] != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
+                @TempData["mensagemErro"]
+            </div>
+        }
+
         <div class="d-flex justify-content-between">
             <h2 style="font-weight: bold;">MINHAS NOTAS</h2>
             <a class="btn-nova-nota" asp-controller="Notas" asp-action="CriarNota"><img src="../img/icon-add.svg" style="width: 15px;" /> Nova nota</a>

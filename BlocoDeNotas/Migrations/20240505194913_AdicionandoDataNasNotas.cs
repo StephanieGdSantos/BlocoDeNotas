@@ -11,12 +11,12 @@ namespace BlocoDeNotas.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<DateTime>(
+            migrationBuilder.AddColumn<string>(
                 name: "DataCriacao",
                 table: "Nota",
-                type: "timestamp with time zone",
+                type: "text",
                 nullable: false,
-                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+                defaultValue: ""); // Você pode definir um valor padrão, se necessário
         }
 
         /// <inheritdoc />

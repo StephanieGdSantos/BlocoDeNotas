@@ -31,8 +31,10 @@
     </div>
 
     <div class="d-flex justify-content-center">
-        <form class="visao-notas w-nova-nota" asp-controller="Notas" asp-action="CriarNota" method="post">
-            <input type="hidden" name="name" value="4" asp-for="UsuarioId"/>
+        <form asp-controller="Notas" asp-action="CriarNota" method="post" class="visao-notas w-nova-nota">
+            <input type="hidden" value="@DateTime.Now.ToString("dd-MM-aaaa")" asp-for="DataCriacao"/>
+            <input type="hidden" value="3" asp-for="UsuarioId"/>
+            <!--depois alterar para receber id do usuario-->
             <input type="text" name="titulo" class="input-titulo" asp-for="Titulo" placeholder="Título aqui" />
             <textarea class="input-nota h-ipt-nova-nota" asp-for="Descricao" placeholder="Anotações aqui..."></textarea>
             <div class="d-flex justify-content-between">
