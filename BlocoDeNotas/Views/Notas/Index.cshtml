@@ -6,14 +6,14 @@
 <div class="d-flex justify-content-end flex-column">
     <div class="d-flex">
         <div class="d-flex justify-content-center" style="flex: 1;">
-            <img src="../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
+            <img src="../../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
         </div>
         <div class="navbar">
             <a class="fw-bold fs-5 text-decoration-none texto-marrom btn">Home</a>
 
             <div class="d-flex align-items-center position-relative" style="cursor: pointer;gap: 0.5rem;" onclick="MostrarOpcoes()">
                 <p class="d-flex mb-0 fw-bold fs-5 texto-marrom">Olá, Stephanie</p>
-                <img src="../img/icon-seta.svg" style="margin-top: 0.2rem; width: 8%;">
+                <img src="../../img/icon-seta.svg" style="margin-top: 0.2rem; width: 8%;">
 
                 <div class="opcoes texto-marrom mostrar" id="opcoes">
                     <a asp-controller="Usuario" asp-action="DadosPessoais">Dados pessoais</a>
@@ -42,38 +42,58 @@
 
         <div class="d-flex justify-content-between">
             <h2 style="font-weight: bold;">MINHAS NOTAS</h2>
-            <a class="btn-nova-nota" asp-controller="Notas" asp-action="CriarNota"><img src="../img/icon-add.svg" style="width: 15px;" /> Nova nota</a>
+            <a class="btn-nova-nota" asp-controller="Notas" asp-action="CriarNota"><img src="../../img/icon-add.svg" style="width: 15px;" /> Nova nota</a>
         </div>
 
         <div class="d-flex justify-content-between">
-            <div class="d-flex flex-column gap-2" style="width: 40%;overflow-y: auto;height: 355px;">
+            <div class="d-flex flex-column gap-2" style="width: 48%;overflow-y: auto;height: 355px;">
 
                 @if (Model != null && Model.Any())
                 {
                     foreach (NotasModel nota in Model)
                     {
-                        <a class="preview-nota" data-id="@nota.Id" data-titulo="@nota.Titulo" data-conteudo="@nota.Descricao">
+                        <a role="button" class="preview-nota" asp-controller="Notas" asp-action="Carregar" asp-route-id="@nota.Id">
                             <h5>@nota.Titulo</h5>
                             <div style="display: flex; align-items: center; gap: 20px;">
                                 <h6>@nota.DataCriacao</h6>
                             </div>
                         </a>
-                        //parei aqui, estava dando falha ao entrar na página
                     }
                 }
 
             </div>
 
-            <form asp-controller="Notas" asp-action="Editar" class="visao-notas w-preview" method="post">
-                <input type="hidden" name="id" id="id"/>
-                <input type="hidden" name="datacriacao" value="@DateTime.Now.ToString("dd/MM/yyyy")" />
-                <input type="text" name="titulo" id="titulo" class="input-titulo"/>
-                <textarea class="input-nota h-ipt-preview" name="descricao" id="descricao"></textarea>
-                <div class="d-flex justify-content-between">
-                    <a role="button" name="id" id="id" class="btn" asp-route-id="" asp-controller="Notas" asp-action="Excluir"><img src="../img/icon-lixeira.svg" alt="Lixeira" style="width: 20px;" /></a>
-                    <button type="submit" class="btn w-50" style="background: #5D4C30; color: white">Salvar</button>
-                </div>
-            </form>
+            @if (ViewData["SelectedNota"] != null)
+            {
+                var selectedNota = (NotasModel)ViewData["SelectedNota"];
+                <form asp-controller="Notas" asp-action="Editar" class="visao-notas w-preview" method="post">
+                    <input type="hidden" name="id" value="@selectedNota.Id" />
+                    <input type="hidden" name="datacriacao" value="@selectedNota.DataCriacao" />
+                    <input type="text" name="titulo" class="input-titulo" value="@selectedNota.Titulo" />
+                    <textarea class="input-nota h-ipt-preview" name="descricao">@selectedNota.Descricao</textarea>
+                    <div class="d-flex justify-content-between">
+                        <a role="button" name="id" id="id" class="btn" asp-controller="Notas" asp-action="Excluir" asp-route-id="@selectedNota.Id">
+                            <img src="../../img/icon-lixeira.svg" alt="Lixeira" style="width: 20px;" />
+                        </a>
+                        <button type="submit" class="btn w-50" style="background: #5D4C30; color: white">Salvar</button>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <form class="visao-notas w-preview">
+                    <input type="hidden" name="id" id="id"/>
+                    <input type="hidden" name="datacriacao"/>
+                    <input type="text" name="titulo" id="titulo" class="input-titulo" readonly/>
+                    <textarea class="input-nota h-ipt-preview" name="descricao" id="descricao" readonly></textarea>
+                    <div class="d-flex justify-content-between">
+                        <a name="id" id="id">
+                            <img src="../../img/icon-lixeira-desativado.svg" alt="Lixeira" style="width: 20px;" />
+                        </a>
+                        <button type="submit" class="btn w-50" style="background: #A89F91; color: white" disabled>Salvar</button>
+                    </div
+                </form>
+            }
         </div>
     </div>
 </div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lFg7VpG6+C8E/p90QBoLm/DIoN+FDTg05CkAR1w9QFc=",
+  "Hash": "GslkaGhG5s0Dc8anzx1zs6aVLsiK3Ok1l/yETtj+zVE=",
   "Source": "BlocoDeNotas",
   "BasePath": "_content/BlocoDeNotas",
   "Mode": "Default",
@@ -148,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\icon-lixeira.svg"
+    },
+    {
+      "Identity": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-lixeira-desativado.svg",
+      "SourceId": "BlocoDeNotas",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\",
+      "BasePath": "_content/BlocoDeNotas",
+      "RelativePath": "img/icon-lixeira-desativado.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\icon-lixeira-desativado.svg"
     },
     {
       "Identity": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-seta.svg",

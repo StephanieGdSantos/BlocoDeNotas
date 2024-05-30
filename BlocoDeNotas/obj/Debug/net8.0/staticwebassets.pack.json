@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\img\\icon-add.svg"
     },
     {
+      "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-lixeira-desativado.svg",
+      "PackagePath": "staticwebassets\\img\\icon-lixeira-desativado.svg"
+    },
+    {
       "Id": "C:\\Users\\gomes\\GITHUB\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\img\\icon-lixeira.svg",
       "PackagePath": "staticwebassets\\img\\icon-lixeira.svg"
     },

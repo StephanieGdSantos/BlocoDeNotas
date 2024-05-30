@@ -84,5 +84,20 @@ namespace BlocoDeNotas.Controllers
 
             return RedirectToAction("Index");
         }
+
+        //[HttpPost]
+        public IActionResult Carregar(int id)
+        {
+            var nota = _notaRepositorio.Selecionar(id);
+            if (nota == null)
+            {
+                TempData["mensagemErro"] = "Nota não encontrada.";
+                return RedirectToAction("Index");
+            }
+
+            ViewData["SelectedNota"] = nota;
+            var notas = _notaRepositorio.ListarNotas();
+            return View("Index", notas);
+        }
     }
 }
