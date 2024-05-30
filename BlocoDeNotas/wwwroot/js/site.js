@@ -11,3 +11,33 @@ function MostrarOpcoes()
 $('.close-alert').click(function () {
     $('.alert').hide('hide')
 })
+
+document.addEventListener("DOMContentLoaded", function () {
+    const notas = document.querySelectorAll(".preview-nota");
+
+    notas.forEach(nota => {
+        nota.addEventListener("click", function () {
+            preencherFormularioComNota(this);
+        });
+    });
+});
+
+function preencherFormularioComNota(notaElement) {
+    const tituloNota = document.getElementById("titulo");
+    const conteudoNota = document.getElementById("descricao");
+    const idNota = document.getElementById("id");
+
+    const id = notaElement.getAttribute("data-id");
+    const titulo = notaElement.getAttribute("data-titulo");
+    const conteudo = notaElement.getAttribute("data-conteudo");
+
+    tituloNota.value = titulo;
+    conteudoNota.value = conteudo;
+    idNota.value = id;
+}
+
+function confirmarExclusao(id) {
+    if (confirm('Tem certeza de que deseja excluir esta nota?')) {
+        document.getElementById('formExcluir-' + id).submit();
+    }
+}

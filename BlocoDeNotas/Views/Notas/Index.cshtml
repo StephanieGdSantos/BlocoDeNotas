@@ -1,4 +1,4 @@
-﻿@model List<NotasModel>
+﻿@model List<NotasModel>;
 @{
     ViewData["Title"] = "Home";
 }
@@ -46,13 +46,13 @@
         </div>
 
         <div class="d-flex justify-content-between">
-            <div class="d-flex flex-column gap-2" style="width: 40%">
+            <div class="d-flex flex-column gap-2" style="width: 40%;overflow-y: auto;height: 355px;">
 
                 @if (Model != null && Model.Any())
                 {
                     foreach (NotasModel nota in Model)
                     {
-                        <a class="preview-nota">
+                        <a class="preview-nota" data-id="@nota.Id" data-titulo="@nota.Titulo" data-conteudo="@nota.Descricao">
                             <h5>@nota.Titulo</h5>
                             <div style="display: flex; align-items: center; gap: 20px;">
                                 <h6>@nota.DataCriacao</h6>
@@ -64,11 +64,13 @@
 
             </div>
 
-            <form class="visao-notas w-preview">
-                <input type="text" name="titulo" value="" class="input-titulo" />
-                <textarea class="input-nota h-ipt-preview"></textarea>
+            <form asp-controller="Notas" asp-action="Editar" class="visao-notas w-preview" method="post">
+                <input type="hidden" name="id" id="id"/>
+                <input type="hidden" name="datacriacao" value="@DateTime.Now.ToString("dd/MM/yyyy")" />
+                <input type="text" name="titulo" id="titulo" class="input-titulo"/>
+                <textarea class="input-nota h-ipt-preview" name="descricao" id="descricao"></textarea>
                 <div class="d-flex justify-content-between">
-                    <a class="btn"><img src="../img/icon-lixeira.svg" alt="Lixeira" style="width: 20px;" /></a>
+                    <a role="button" name="id" id="id" class="btn" asp-route-id="" asp-controller="Notas" asp-action="Excluir"><img src="../img/icon-lixeira.svg" alt="Lixeira" style="width: 20px;" /></a>
                     <button type="submit" class="btn w-50" style="background: #5D4C30; color: white">Salvar</button>
                 </div>
             </form>

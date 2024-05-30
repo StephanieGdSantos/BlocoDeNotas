@@ -20,6 +20,24 @@ namespace BlocoDeNotas.Controllers
         {
             return View();
         }
+        public IActionResult Excluir(int id)
+        {
+            try
+            {
+                if (id != null)
+                {
+                    _notaRepositorio.Excluir(id);
+                    TempData["mensagemSucesso"] = "Nota excluída com sucesso.";
+                }
+
+            }
+            catch (Exception erro)
+            {
+                TempData["mensagemErro"] = "Ops! Não foi possível excluir a nota. Tente novamente! " +
+                    $"Detalhe do erro: {erro.Message}";
+            }
+            return RedirectToAction("Index");
+        }
 
         [HttpPost]
         public IActionResult CriarNota(NotasModel nota)
@@ -52,17 +70,19 @@ namespace BlocoDeNotas.Controllers
                 {
                     _notaRepositorio.Editar(nota);
                     TempData["mensagemSucesso"] = "Nota editada com sucesso.";
-                    return RedirectToAction("Index");
                 }
-
-                return View("Editar", nota);
+                else
+                {
+                    TempData["mensagemErro"] = "Dados inválidos.";
+                }
             }
-            catch (System.Exception erro)
+            catch (Exception erro)
             {
                 TempData["mensagemErro"] = "Ops! Não foi possível editar a nota. Tente novamente! " +
                     $"Detalhe do erro: {erro.Message}";
-                return RedirectToAction("Index");
             }
+
+            return RedirectToAction("Index");
         }
     }
 }

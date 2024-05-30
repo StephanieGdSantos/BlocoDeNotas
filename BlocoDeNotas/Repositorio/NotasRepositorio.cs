@@ -31,7 +31,7 @@ namespace BlocoDeNotas.Repositorio
 
             notaDB.Titulo = nota.Titulo;
             notaDB.Descricao = nota.Descricao;
-            notaDB.DataCriacao = nota.DataCriacao;
+            notaDB.DataCriacao = DateTime.Now.ToString("dd/MM/yyyy");
 
             _bancoContext.Nota.Update(notaDB);
             _bancoContext.SaveChanges();
