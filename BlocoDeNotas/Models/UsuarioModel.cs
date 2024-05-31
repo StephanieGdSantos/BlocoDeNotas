@@ -5,8 +5,6 @@ namespace BlocoDeNotas.Models
     public class UsuarioModel
     {
         public int Id { get; set; }
-
-        [Required(ErrorMessage = "Insira seu nome.")]
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Digite seu e-mail.")]

@@ -1,15 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BlocoDeNotas.Models;
 using BlocoDeNotas.Repositorio;
+using BlocoDeNotas.Data;
+using Microsoft.AspNetCore.Session;
 
 namespace BlocoDeNotas.Controllers
 {
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
-        public UsuarioController(IUsuarioRepositorio usuarioRepositorio)
+        private readonly BancoContext _bancoContext;
+        public UsuarioController(IUsuarioRepositorio usuarioRepositorio, BancoContext bancoContext)
         {
             _usuarioRepositorio = usuarioRepositorio;
+            _bancoContext = bancoContext;
         }
 
         public IActionResult Index()
@@ -45,6 +49,26 @@ namespace BlocoDeNotas.Controllers
                 TempData["mensagemErro"] = "Ops! Não foi possível concluir o cadastro. Para mais detalhes: " + erro.Message;
                 return RedirectToAction("Index");
             }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(UsuarioModel usuario)
+        {
+                var validacao = _bancoContext.Usuario.Where(a => a.Email.Equals(usuario.Email) && a.Senha.Equals(usuario.Senha)).FirstOrDefault();
+                if (validacao != null)
+                {
+                    HttpContext.Session.SetString("UsuarioID", validacao.Id.ToString());
+                    HttpContext.Session.SetString("UsuarioNome", validacao.Nome);
+                    return RedirectToAction("Index", "Notas");
+                }
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Logout()
+        {
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login");
         }
     }
 }

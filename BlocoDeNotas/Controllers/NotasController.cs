@@ -24,7 +24,7 @@ namespace BlocoDeNotas.Controllers
         {
             try
             {
-                if (id != null)
+                if (ModelState.IsValid)
                 {
                     _notaRepositorio.Excluir(id);
                     TempData["mensagemSucesso"] = "Nota excluída com sucesso.";
@@ -85,7 +85,6 @@ namespace BlocoDeNotas.Controllers
             return RedirectToAction("Index");
         }
 
-        //[HttpPost]
         public IActionResult Carregar(int id)
         {
             var nota = _notaRepositorio.Selecionar(id);

@@ -12,8 +12,21 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<BancoContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Defina o tempo limite da sessão
+    options.Cookie.HttpOnly = true; // Torne o cookie da sessão acessível apenas via HTTP (não JavaScript)
+    options.Cookie.IsEssential = true; // Torne o cookie essencial para o funcionamento do site
+});
+
 builder.Services.AddScoped<INotasRepositorio, NotasRepositorio>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+
+builder.Services.AddControllersWithViews();
+
+// Adiciona serviços de sessão
+// Add MVC services to the services container.
+
 
 var app = builder.Build();
 
@@ -29,7 +42,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(

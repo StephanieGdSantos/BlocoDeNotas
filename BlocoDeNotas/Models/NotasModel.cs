@@ -10,10 +10,10 @@ namespace BlocoDeNotas.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Digite o título da nota.")]
-        public string Titulo { get; set; }
+        public required string Titulo { get; set; }
 
         [Required(ErrorMessage = "Digite a descrição da nota.")]
-        public string Descricao { get; set; }
+        public required string Descricao { get; set; }
         public string DataCriacao { get; set; }
         public int UsuarioId { get; set; } // Chave estrangeira para a tabela Usuario
 
