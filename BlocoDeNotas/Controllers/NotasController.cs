@@ -13,11 +13,21 @@ namespace BlocoDeNotas.Controllers
         }
         public IActionResult Index()
         {
+            string usuarioID = HttpContext.Session.GetString("UsuarioID");
+            string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+
+            ViewBag.UsuarioID = usuarioID;
+            ViewBag.UsuarioNome = usuarioNome;
             List<NotasModel> notas = _notaRepositorio.ListarNotas();
             return View(notas);
         }
         public IActionResult CriarNota()
         {
+            string usuarioID = HttpContext.Session.GetString("UsuarioID");
+            string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+
+            ViewBag.UsuarioID = usuarioID;
+            ViewBag.UsuarioNome = usuarioNome;
             return View();
         }
         public IActionResult Excluir(int id)
@@ -42,6 +52,7 @@ namespace BlocoDeNotas.Controllers
         [HttpPost]
         public IActionResult CriarNota(NotasModel nota)
         {
+
             try
             {
                 if (ModelState.IsValid)
@@ -50,8 +61,10 @@ namespace BlocoDeNotas.Controllers
                     TempData["mensagemSucesso"] = "Nota salva com sucesso.";
                     return RedirectToAction("Index");
                 }
-
-                return View(nota);
+                else
+                {
+                    return RedirectToAction("Index", "Usuario");
+                }
             }
             catch (System.Exception erro)
             {

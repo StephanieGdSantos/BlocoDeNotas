@@ -25,15 +25,16 @@
     </div>
 
     <div class="d-flex" style="padding: 25px 10%;">
-        <a class="d-flex gap-3 text-decoration-none voltar" asp-controller="Notas" asp-action="Home">
+        <a class="d-flex gap-3 text-decoration-none voltar" asp-controller="Notas" asp-action="Index">
             <img src="../img/seta-voltar.svg" style="width: 30px;" />Voltar
         </a>
     </div>
 
+<h2>@ViewBag.UsuarioNome, @ViewBag.UsuarioID</h2>
     <div class="d-flex justify-content-center">
         <form asp-controller="Notas" asp-action="CriarNota" method="post" class="visao-notas w-nova-nota">
             <input type="hidden" value="@DateTime.Now.ToString("dd/MM/yyyy")" asp-for="DataCriacao"/>
-            <input type="hidden" value="3" asp-for="UsuarioId"/>
+            <input type="hidden" value="@ViewBag.UsuarioID" asp-for="UsuarioId"/>
             <!--depois alterar para receber id do usuario-->
             <input type="text" name="titulo" class="input-titulo" asp-for="Titulo" placeholder="Título aqui" />
             <textarea class="input-nota h-ipt-nova-nota" asp-for="Descricao" placeholder="Anotações aqui..."></textarea>

@@ -18,6 +18,19 @@ namespace BlocoDeNotas.Controllers
 
         public IActionResult Index()
         {
+            string usuarioID = HttpContext.Session.GetString("UsuarioID");
+            string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+
+            if (!string.IsNullOrEmpty(usuarioID) && !string.IsNullOrEmpty(usuarioNome))
+            {
+                ViewBag.UsuarioID = usuarioID;
+                ViewBag.UsuarioNome = usuarioNome;
+            }
+            else
+            {
+                return View();
+            }
+
             return View();
         }
 
@@ -28,6 +41,19 @@ namespace BlocoDeNotas.Controllers
 
         public IActionResult DadosPessoais()
         {
+            string usuarioID = HttpContext.Session.GetString("UsuarioID");
+            string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+
+            if (!string.IsNullOrEmpty(usuarioID) && !string.IsNullOrEmpty(usuarioNome))
+            {
+                ViewBag.UsuarioID = usuarioID;
+                ViewBag.UsuarioNome = usuarioNome;
+            }
+            else
+            {
+                return RedirectToAction("Index", "Usuario");
+            }
+
             return View();
         }
 
