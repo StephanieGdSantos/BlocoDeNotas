@@ -26,6 +26,24 @@
 
 </style>
 <body>
+    <header class="d-flex">
+        <div class="d-flex justify-content-center" style="flex: 1;">
+            <img src="../../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
+        </div>
+        <div class="navbar">
+            <a class="fw-bold fs-5 text-decoration-none texto-marrom btn">Home</a>
+
+            <div class="d-flex align-items-center position-relative" style="cursor: pointer;gap: 0.5rem;" onclick="MostrarOpcoes()">
+                <p class="d-flex mb-0 fw-bold fs-5 texto-marrom">Olá, @ViewBag.UsuarioNome</p>
+                <img src="../../img/icon-seta.svg" style="margin-top: 0.2rem; width: 8%;">
+
+                <div class="opcoes texto-marrom mostrar" id="opcoes">
+                    <a asp-controller="Usuario" asp-action="DadosPessoais">Dados pessoais</a>
+                    <a asp-controller="Usuario" asp-action="Logout">Sair</a>
+                </div>
+            </div>
+        </div>
+    </header>
     <div>
         <main role="main" class="pb-3">
             @RenderBody()
@@ -33,7 +51,7 @@
     </div>
 
     <footer>
-        <div class="footer">
+        <div class="footer" style="bottom: auto;">
             <a href="https://www.linkedin.com/in/stephanie-gomes-842a192a7/" style="color: #5D4C30;font-size: 10pt; text-decoration: none;">Desenvolvido por Stephanie Gomes</a>
         </div>
     </footer>

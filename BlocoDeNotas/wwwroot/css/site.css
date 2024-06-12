@@ -216,11 +216,12 @@ a:hover {
 .opcoes {
     position: absolute;
     top: 40px;
+    right: 10px;
     background: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 10rem;
     border-radius: 5px;
     overflow: hidden;
     font-size: 1rem;

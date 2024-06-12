@@ -16,9 +16,8 @@ namespace BlocoDeNotas.Controllers
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
 
-            ViewBag.UsuarioID = usuarioID;
             ViewBag.UsuarioNome = usuarioNome;
-            List<NotasModel> notas = _notaRepositorio.ListarNotas();
+            List<NotasModel> notas = _notaRepositorio.ListarNotas(int.Parse(usuarioID));
             return View(notas);
         }
         public IActionResult CriarNota()
@@ -100,6 +99,9 @@ namespace BlocoDeNotas.Controllers
 
         public IActionResult Carregar(int id)
         {
+            string usuarioID = HttpContext.Session.GetString("UsuarioID");
+            string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+            ViewBag.UsuarioNome = usuarioNome;
             var nota = _notaRepositorio.Selecionar(id);
             if (nota == null)
             {
@@ -108,7 +110,7 @@ namespace BlocoDeNotas.Controllers
             }
 
             ViewData["SelectedNota"] = nota;
-            var notas = _notaRepositorio.ListarNotas();
+            var notas = _notaRepositorio.ListarNotas(int.Parse(usuarioID));
             return View("Index", notas);
         }
     }

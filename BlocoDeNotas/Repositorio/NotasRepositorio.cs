@@ -14,9 +14,9 @@ namespace BlocoDeNotas.Repositorio
         {
             return _bancoContext.Nota.FirstOrDefault(x => x.Id == id);
         }
-        public List<NotasModel> ListarNotas()
+        public List<NotasModel> ListarNotas(int usuarioID)
         {
-            return _bancoContext.Nota.ToList();
+            return _bancoContext.Nota.Where(n=> n.UsuarioId.Equals(usuarioID)).ToList();
         }
         public NotasModel Adicionar(NotasModel nota)
         {

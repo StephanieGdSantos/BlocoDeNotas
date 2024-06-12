@@ -3,6 +3,7 @@ using BlocoDeNotas.Models;
 using BlocoDeNotas.Repositorio;
 using BlocoDeNotas.Data;
 using Microsoft.AspNetCore.Session;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BlocoDeNotas.Controllers
 {
@@ -53,8 +54,29 @@ namespace BlocoDeNotas.Controllers
             {
                 return RedirectToAction("Index", "Usuario");
             }
+            UsuarioModel Usuario = _usuarioRepositorio.Selecionar(int.Parse(usuarioID));
+            return View(Usuario);
+        }
 
-            return View();
+        public IActionResult Excluir(int id)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _usuarioRepositorio.Excluir(id);
+                    HttpContext.Session.Clear();
+                    TempData["mensagemSucesso"] = "Conta excluída com sucesso!";
+                    return RedirectToAction("Index", "Usuario");
+                }
+
+            }
+            catch (Exception erro)
+            {
+                TempData["mensagemErro"] = "Ops! Não foi possível excluir a conta. Tente novamente! " +
+                    $"Detalhe do erro: {erro.Message}";
+            }
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -90,11 +112,37 @@ namespace BlocoDeNotas.Controllers
                 }
             return RedirectToAction("Index");
         }
+        public IActionResult Editar(UsuarioModel usuario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _usuarioRepositorio.Editar(usuario);
+                    TempData["mensagemSucesso"] = "Dados editados com sucesso.";
+                }
+                else
+                {
+                    TempData["mensagemErro"] = "Dados inválidos.";
+                }
+            }
+            catch (Exception erro)
+            {
+                TempData["mensagemErro"] = "Ops! Não foi possível editar os dados. Tente novamente! " +
+                    $"Detalhe do erro: {erro.Message}";
+            }
+            string usuarioID = HttpContext.Session.GetString("UsuarioID");
+            string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+            ViewBag.UsuarioID = usuarioID;
+            ViewBag.UsuarioNome = usuarioNome;
+            return RedirectToAction("Index");
+        }
+
 
         public ActionResult Logout()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Login");
+            return RedirectToAction("Index", "Usuario");
         }
     }
 }
