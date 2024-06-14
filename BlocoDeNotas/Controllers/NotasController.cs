@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BlocoDeNotas.Models;
 using BlocoDeNotas.Repositorio;
+using System.Diagnostics.CodeAnalysis;
 
 namespace BlocoDeNotas.Controllers
 {
@@ -15,19 +16,29 @@ namespace BlocoDeNotas.Controllers
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+            if (!string.IsNullOrEmpty(usuarioID) && !string.IsNullOrEmpty(usuarioNome))
+            {
+                string usuarioPrimeiroNome = usuarioNome.Split(' ')[0];
 
-            ViewBag.UsuarioNome = usuarioNome;
-            List<NotasModel> notas = _notaRepositorio.ListarNotas(int.Parse(usuarioID));
-            return View(notas);
+                ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
+                List<NotasModel> notas = _notaRepositorio.ListarNotas(int.Parse(usuarioID));
+                return View(notas);
+            }
+            return RedirectToAction("Usuario", "Index");
         }
         public IActionResult CriarNota()
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
 
-            ViewBag.UsuarioID = usuarioID;
-            ViewBag.UsuarioNome = usuarioNome;
-            return View();
+            if (!string.IsNullOrEmpty(usuarioID) && !string.IsNullOrEmpty(usuarioNome))
+            {
+                string usuarioPrimeiroNome = usuarioNome.Split(' ')[0];
+                ViewBag.UsuarioID = usuarioID;
+                ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
+                return View();
+            }
+            return RedirectToAction("Usuario", "Index");
         }
         public IActionResult Excluir(int id)
         {
@@ -101,17 +112,23 @@ namespace BlocoDeNotas.Controllers
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
-            ViewBag.UsuarioNome = usuarioNome;
-            var nota = _notaRepositorio.Selecionar(id);
-            if (nota == null)
-            {
-                TempData["mensagemErro"] = "Nota não encontrada.";
-                return RedirectToAction("Index");
-            }
 
-            ViewData["SelectedNota"] = nota;
-            var notas = _notaRepositorio.ListarNotas(int.Parse(usuarioID));
-            return View("Index", notas);
+            if (!string.IsNullOrEmpty(usuarioID) && !string.IsNullOrEmpty(usuarioNome))
+            {
+                string usuarioPrimeiroNome = usuarioNome.Split(' ')[0];
+                ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
+                var nota = _notaRepositorio.Selecionar(id);
+                if (nota == null)
+                {
+                    TempData["mensagemErro"] = "Nota não encontrada.";
+                    return RedirectToAction("Index");
+                }
+
+                ViewData["SelectedNota"] = nota;
+                var notas = _notaRepositorio.ListarNotas(int.Parse(usuarioID));
+                return View("Index", notas);
+            }
+            return RedirectToAction("Usuario", "Index");
         }
     }
 }

@@ -1,4 +1,19 @@
-﻿<!DOCTYPE html>
+﻿<style>
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FAEFC2;
+        color: #5D4C30;
+    }
+
+    body {
+        font-family: 'Lato', sans-serif;
+    }
+
+</style>
+
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
@@ -8,50 +23,40 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/BlocoDeNotas.styles.css" asp-append-version="true" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
-<style>
-    .footer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #FAEFC2;
-        color: #5D4C30; 
-        height: 50px;
-        width: 100%;
-    }
 
-    body {
-        font-family: 'Lato', sans-serif;
-    }
-
-</style>
 <body>
-    <header class="d-flex">
-        <div class="d-flex justify-content-center" style="flex: 1;">
-            <img src="../../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
-        </div>
-        <div class="navbar">
-            <a class="fw-bold fs-5 text-decoration-none texto-marrom btn">Home</a>
+    @if (ViewBag.UsuarioPrimeiroNome != null)
+    {
+        <header class="d-flex">
+            <div class="d-flex justify-content-center" style="flex: 1;">
+                <img src="../../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
+            </div>
+            <div class="navbar">
+                <a class="fw-bold fs-5 text-decoration-none btn" style="color: #5D4C30;">HOME</a>
 
-            <div class="d-flex align-items-center position-relative" style="cursor: pointer;gap: 0.5rem;" onclick="MostrarOpcoes()">
-                <p class="d-flex mb-0 fw-bold fs-5 texto-marrom">Olá, @ViewBag.UsuarioNome</p>
-                <img src="../../img/icon-seta.svg" style="margin-top: 0.2rem; width: 8%;">
+                <div class="d-flex align-items-center position-relative" style="cursor: pointer;gap: 0.5rem;" onclick="MostrarOpcoes()">
+                    <p class="d-flex mb-0 fw-bold fs-5 texto-marrom">Olá, @ViewBag.UsuarioPrimeiroNome</p>
+                    <img src="../../img/icon-seta.svg" style="margin-top: 0.2rem; width: 8%;">
 
-                <div class="opcoes texto-marrom mostrar" id="opcoes">
-                    <a asp-controller="Usuario" asp-action="DadosPessoais">Dados pessoais</a>
-                    <a asp-controller="Usuario" asp-action="Logout">Sair</a>
+                    <div class="opcoes texto-marrom mostrar" id="opcoes">
+                        <a asp-controller="Usuario" asp-action="DadosPessoais">Dados pessoais</a>
+                        <a asp-controller="Usuario" asp-action="Logout">Sair</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <div>
+        </header>
+    }
+    <div style="display: flex; align-items: center; justify-content: center; height: 90%;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer>
-        <div class="footer" style="bottom: auto;">
+    <footer class="footer">
+        <div>
             <a href="https://www.linkedin.com/in/stephanie-gomes-842a192a7/" style="color: #5D4C30;font-size: 10pt; text-decoration: none;">Desenvolvido por Stephanie Gomes</a>
         </div>
     </footer>

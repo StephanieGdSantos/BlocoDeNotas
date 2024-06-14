@@ -1,5 +1,7 @@
 html {
     font-size: 14px;
+    height: 100vh;
+    width: 100vw;
 }
 
 @media (min-width: 768px) {
@@ -19,6 +21,10 @@ h1, h2, h3, h4, h5, h6 {
 body {
     min-height: 100vh;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 a:hover {
@@ -104,9 +110,6 @@ a:hover {
     justify-content: space-between;
     background: #D7D9FA;
     padding: 15px 50px;
-    /* padding-left: 20px; */
-    /* padding-right: 20px; */
-    height: 25%;
     width: 87%;
     border-radius: 0 0 0 15px;
 }

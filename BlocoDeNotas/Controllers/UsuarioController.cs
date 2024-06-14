@@ -44,18 +44,16 @@ namespace BlocoDeNotas.Controllers
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+            string usuarioPrimeiroNome = usuarioNome.Split(" ")[0];
 
             if (!string.IsNullOrEmpty(usuarioID) && !string.IsNullOrEmpty(usuarioNome))
             {
                 ViewBag.UsuarioID = usuarioID;
-                ViewBag.UsuarioNome = usuarioNome;
+                ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
+                UsuarioModel Usuario = _usuarioRepositorio.Selecionar(int.Parse(usuarioID));
+                return View(Usuario);
             }
-            else
-            {
-                return RedirectToAction("Index", "Usuario");
-            }
-            UsuarioModel Usuario = _usuarioRepositorio.Selecionar(int.Parse(usuarioID));
-            return View(Usuario);
+            return RedirectToAction("Index", "Usuario");
         }
 
         public IActionResult Excluir(int id)
@@ -67,7 +65,7 @@ namespace BlocoDeNotas.Controllers
                     _usuarioRepositorio.Excluir(id);
                     HttpContext.Session.Clear();
                     TempData["mensagemSucesso"] = "Conta excluída com sucesso!";
-                    return RedirectToAction("Index", "Usuario");
+                    return Logout();
                 }
 
             }
@@ -108,10 +106,13 @@ namespace BlocoDeNotas.Controllers
                 {
                     HttpContext.Session.SetString("UsuarioID", validacao.Id.ToString());
                     HttpContext.Session.SetString("UsuarioNome", validacao.Nome);
+                    HttpContext.Session.SetString("UsuarioPrimeiroNome", (validacao.Nome).Split(" ")[0]);
                     return RedirectToAction("Index", "Notas");
                 }
             return RedirectToAction("Index");
         }
+
+        [HttpPost]
         public IActionResult Editar(UsuarioModel usuario)
         {
             try
@@ -133,8 +134,9 @@ namespace BlocoDeNotas.Controllers
             }
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
+            string usuarioPrimeiroNome = usuarioNome.Split(" ")[0];
+            ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
             ViewBag.UsuarioID = usuarioID;
-            ViewBag.UsuarioNome = usuarioNome;
             return RedirectToAction("Index");
         }
 
@@ -142,7 +144,7 @@ namespace BlocoDeNotas.Controllers
         public ActionResult Logout()
         {
             HttpContext.Session.Clear();
-            return RedirectToAction("Index", "Usuario");
+            return RedirectToAction("Index");
         }
     }
 }

@@ -4,7 +4,7 @@
 }
 
 
-<div class="d-flex justify-content-end flex-column">
+<div class="d-flex justify-content-end flex-column" style="width: 100vw;">
 
     <div class="d-flex flex-column" style="padding: 40px 100px; gap: 30px;">
         @if (TempData["mensagemSucesso"] != null)
@@ -70,7 +70,7 @@
                     <input type="text" name="titulo" id="titulo" class="input-titulo" readonly/>
                     <textarea class="input-nota h-ipt-preview" name="descricao" id="descricao" readonly></textarea>
                     <div class="d-flex justify-content-between">
-                        <a name="id" id="id">
+                        <a class="btn" style="cursor: auto;" name="id" id="id">
                             <img src="../../img/icon-lixeira-desativado.svg" alt="Lixeira" style="width: 20px;" />
                         </a>
                         <button type="submit" class="btn w-50" style="background: #A89F91; color: white" disabled>Salvar</button>
