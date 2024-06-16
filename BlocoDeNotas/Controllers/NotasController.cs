@@ -69,17 +69,19 @@ namespace BlocoDeNotas.Controllers
                 {
                     _notaRepositorio.Adicionar(nota);
                     TempData["mensagemSucesso"] = "Nota salva com sucesso.";
+                    //ViewBag.MensagemSucesso = "Nota salva com sucesso.";
                     return RedirectToAction("Index");
                 }
                 else
                 {
-                    return RedirectToAction("Index", "Usuario");
+                    return RedirectToAction("Index");
                 }
             }
             catch (System.Exception erro)
             {
                 TempData["mensagemErro"] = "Ops! Não foi possível salvar a nota. Tente novamente! " +
                     $"Detalhe do erro: {erro.Message}";
+                //ViewBag.MensagemErro = $"Ops! Não foi possível salvar a nota. Detalhes do erro: {erro.Message}";
                 return RedirectToAction("Index");
             }
         }

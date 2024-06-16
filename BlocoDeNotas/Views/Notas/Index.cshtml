@@ -1,27 +1,38 @@
-﻿@model List<NotasModel>;
+﻿@using Newtonsoft.Json
+@model List<NotasModel>;
 @{
     ViewData["Title"] = "Home";
 }
 
+@section Scripts {
+    <script>
+        var mensagemSucesso = @Html.Raw(JsonConvert.SerializeObject(TempData["MensagemSucesso"]))
+        var mensagemErro = @Html.Raw(JsonConvert.SerializeObject(TempData["MensagemErro"]))
+
+        if (mensagemSucesso != null && mensagemSucesso != '')
+        {
+            swal({
+            title: 'Sucesso',
+            text: mensagemSucesso,
+            icon: 'success'
+            });
+        }
+        else if (mensagemErro != null && mensagemErro != '')
+        {
+            swal({
+            title: 'Falha',
+            text: mensagemErro,
+            icon: 'error'
+            });
+        }
+
+    </script>
+}
+
+
 
 <div class="d-flex justify-content-end flex-column" style="width: 100vw;">
-
     <div class="d-flex flex-column" style="padding: 40px 100px; gap: 30px;">
-        @if (TempData["mensagemSucesso"] != null)
-        {
-            <div class="alert alert-success" role="alert">
-                <button type="button" class="btn btn-success btn-sm close-alert" arial-label="Close">X</button>
-                @TempData["mensagemSucesso"]
-            </div>
-        }
-
-        @if (TempData["mensagemErro"] != null)
-        {
-            <div class="alert alert-danger" role="alert">
-                <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
-                @TempData["mensagemErro"]
-            </div>
-        }
 
         <div class="d-flex justify-content-between">
             <h2 style="font-weight: bold;">MINHAS NOTAS</h2>
@@ -29,7 +40,7 @@
         </div>
 
         <div class="d-flex justify-content-between">
-            <div class="d-flex flex-column gap-2" style="width: 48%;overflow-y: auto;height: 355px;">
+            <div class="d-flex flex-column gap-2" style="width: 48%;overflow-y: auto;height: 343px;">
 
                 @if (Model != null && Model.Any())
                 {

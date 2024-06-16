@@ -165,3 +165,4 @@ C:\Users\gomes\GITHUB\BlocoDeNotas\BlocoDeNotas\obj\Debug\net8.0\refint\BlocoDeN
 C:\Users\gomes\GITHUB\BlocoDeNotas\BlocoDeNotas\obj\Debug\net8.0\BlocoDeNotas.pdb
 C:\Users\gomes\GITHUB\BlocoDeNotas\BlocoDeNotas\obj\Debug\net8.0\BlocoDeNotas.genruntimeconfig.cache
 C:\Users\gomes\GITHUB\BlocoDeNotas\BlocoDeNotas\obj\Debug\net8.0\ref\BlocoDeNotas.dll
+C:\Users\gomes\GITHUB\BlocoDeNotas\BlocoDeNotas\bin\Debug\net8.0\Newtonsoft.Json.dll
