@@ -11,3 +11,16 @@ function MostrarOpcoes()
 $('.close-alert').click(function () {
     $('.alert').hide('hide')
 })
+
+function Sair() {
+    swal({
+        title: 'Deseja sair?',
+        text: "Ao sair, a navegação será perdida.",
+        icon: 'warning',
+        buttons: ['Cancelar', true]
+    }).then((result) => {
+        if (result) {
+            window.location.href = 'https://localhost:44370/Usuario/Logout';
+        }
+    });
+}

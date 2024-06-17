@@ -1,4 +1,5 @@
-﻿@model UsuarioModel;
+﻿@using Newtonsoft.Json
+@model UsuarioModel;
 @{
     ViewData["Title"] = "Entrar";
 }
@@ -29,22 +30,32 @@
     }
 </style>
 
-<div>
-    @if (TempData["mensagemSucesso"] != null)
-    {
-        <div class="alert alert-success" role="alert">
-            <button type="button" class="btn btn-success btn-sm close-alert" arial-label="Close">X</button>
-            @TempData["mensagemSucesso"]
-        </div>
-    }
+@section Scripts {
+    <script>
+        var mensagemSucesso = @Html.Raw(JsonConvert.SerializeObject(TempData["MensagemSucesso"]))
+        var mensagemErro = @Html.Raw(JsonConvert.SerializeObject(TempData["MensagemErro"]))
 
-    @if (TempData["mensagemErro"] != null)
-    {
-        <div class="alert alert-danger" role="alert">
-            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Close">X</button>
-            @TempData["mensagemErro"]
-        </div>
-    }
+        if (mensagemSucesso != null && mensagemSucesso != '')
+        {
+            swal({
+            title: 'Sucesso',
+            text: mensagemSucesso,
+            icon: 'success'
+            });
+        }
+        else if (mensagemErro != null && mensagemErro != '')
+        {
+            swal({
+            title: 'Falha',
+            text: mensagemErro,
+            icon: 'error'
+            });
+        }
+
+    </script>
+}
+
+<div>
 
     <div class="formulario login">
         <div class="convite cadastro">
