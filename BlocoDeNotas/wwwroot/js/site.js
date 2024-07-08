@@ -24,3 +24,29 @@ function Sair() {
         }
     });
 }
+
+function ExcluirConta(id) {
+    swal({
+        title: 'Deseja excluir?',
+        text: "Ao excluir, não será possível recuperar a conta.",
+        icon: 'warning',
+        buttons: ['Cancelar', true]
+    }).then((result) => {
+        if (result) {
+            window.location.href = 'https://localhost:44370/Usuario/Excluir/'+id;
+        }
+    });
+}
+
+function ExcluirNota(id) {
+    swal({
+        title: 'Deseja excluir?',
+        text: "Ao excluir, não será possível recuperar a nota.",
+        icon: 'warning',
+        buttons: ['Cancelar', true]
+    }).then((result) => {
+        if (result) {
+            window.location.href = 'https://localhost:44370/Notas/Excluir/' + id;
+        }
+    });
+}

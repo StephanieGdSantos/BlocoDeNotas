@@ -40,6 +40,7 @@ namespace BlocoDeNotas.Controllers
             }
             return RedirectToAction("Usuario", "Index");
         }
+
         public IActionResult Excluir(int id)
         {
             try
@@ -49,7 +50,6 @@ namespace BlocoDeNotas.Controllers
                     _notaRepositorio.Excluir(id);
                     TempData["mensagemSucesso"] = "Nota excluída com sucesso.";
                 }
-
             }
             catch (Exception erro)
             {
@@ -69,7 +69,6 @@ namespace BlocoDeNotas.Controllers
                 {
                     _notaRepositorio.Adicionar(nota);
                     TempData["mensagemSucesso"] = "Nota salva com sucesso.";
-                    //ViewBag.MensagemSucesso = "Nota salva com sucesso.";
                     return RedirectToAction("Index");
                 }
                 else
@@ -81,7 +80,6 @@ namespace BlocoDeNotas.Controllers
             {
                 TempData["mensagemErro"] = "Ops! Não foi possível salvar a nota. Tente novamente! " +
                     $"Detalhe do erro: {erro.Message}";
-                //ViewBag.MensagemErro = $"Ops! Não foi possível salvar a nota. Detalhes do erro: {erro.Message}";
                 return RedirectToAction("Index");
             }
         }

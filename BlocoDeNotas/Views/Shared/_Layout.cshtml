@@ -35,7 +35,7 @@
                 <img src="../../img/logotipo.svg" alt="Logotipo NoteNest" style="width: 100%;max-width: 50px;object-fit: contain;" />
             </div>
             <div class="navbar">
-                <a class="fw-bold fs-5 text-decoration-none btn" style="color: #5D4C30;">HOME</a>
+                <a class="fw-bold fs-5 text-decoration-none btn" style="color: #5D4C30;" asp-controller="Usuario" asp-action="Index">HOME</a>
 
                 <div class="d-flex align-items-center position-relative" style="cursor: pointer;gap: 0.5rem;" onclick="MostrarOpcoes()">
                     <p class="d-flex mb-0 fw-bold fs-5 texto-marrom">Olá, @ViewBag.UsuarioPrimeiroNome</p>
@@ -44,7 +44,6 @@
                     <div class="opcoes texto-marrom mostrar" id="opcoes">
                         <a asp-controller="Usuario" asp-action="DadosPessoais">Dados pessoais</a>
                         <a role="button" onclick="Sair()">Sair</a>
-                        <!--<a asp-controller="Usuario" asp-action="Logout">Sair</a>-->
                     </div>
                 </div>
             </div>

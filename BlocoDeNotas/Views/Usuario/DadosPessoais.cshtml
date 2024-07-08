@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="d-flex justify-content-between" style="margin-top: 25px;">
-                <a role="button" asp-action="Excluir" asp-controller="Usuario" asp-route-id="@Model.Id" class="link-danger">Excluir conta</a>
+                <a role="button" onclick="ExcluirConta(@Model.Id)" class="link-danger">Excluir conta</a>
                 <button type="submit" class="botao-enter">Atualizar</button>
             </div>
         </form>

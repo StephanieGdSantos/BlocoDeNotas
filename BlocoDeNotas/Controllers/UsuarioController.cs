@@ -101,14 +101,15 @@ namespace BlocoDeNotas.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(UsuarioModel usuario)
         {
-                var validacao = _bancoContext.Usuario.Where(a => a.Email.Equals(usuario.Email) && a.Senha.Equals(usuario.Senha)).FirstOrDefault();
-                if (validacao != null)
-                {
-                    HttpContext.Session.SetString("UsuarioID", validacao.Id.ToString());
-                    HttpContext.Session.SetString("UsuarioNome", validacao.Nome);
-                    HttpContext.Session.SetString("UsuarioPrimeiroNome", (validacao.Nome).Split(" ")[0]);
-                    return RedirectToAction("Index", "Notas");
-                }
+            var validacao = _bancoContext.Usuario.Where(a => a.Email.Equals(usuario.Email) && a.Senha.Equals(usuario.Senha)).FirstOrDefault();
+            if (validacao != null)
+            {
+                HttpContext.Session.SetString("UsuarioID", validacao.Id.ToString());
+                HttpContext.Session.SetString("UsuarioNome", validacao.Nome);
+                HttpContext.Session.SetString("UsuarioPrimeiroNome", (validacao.Nome).Split(" ")[0]);
+                return RedirectToAction("Index", "Notas");
+            }
+            TempData["MensagemErro"] = "Login ou senha incorretos.";
             return RedirectToAction("Index");
         }
 
