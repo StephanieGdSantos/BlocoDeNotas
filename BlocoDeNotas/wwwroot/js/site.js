@@ -33,7 +33,7 @@ function ExcluirConta(id) {
         buttons: ['Cancelar', true]
     }).then((result) => {
         if (result) {
-            window.location.href = 'https://localhost:44370/Usuario/Excluir/'+id;
+            window.location.href = 'https://localhost:7236/Usuario/Excluir/'+id;
         }
     });
 }
@@ -46,7 +46,7 @@ function ExcluirNota(id) {
         buttons: ['Cancelar', true]
     }).then((result) => {
         if (result) {
-            window.location.href = 'https://localhost:44370/Notas/Excluir/' + id;
+            window.location.href = 'https://localhost:7236/Notas/Excluir/' + id;
         }
     });
 }

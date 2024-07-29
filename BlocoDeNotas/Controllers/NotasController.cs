@@ -1,32 +1,48 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using BlocoDeNotas.Models;
 using BlocoDeNotas.Repositorio;
-using System.Diagnostics.CodeAnalysis;
+using BlocoDeNotas.Data;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace BlocoDeNotas.Controllers
 {
     public class NotasController : Controller
     {
         private readonly INotasRepositorio _notaRepositorio;
-        public NotasController(INotasRepositorio notasRepositorio)
+        private readonly BancoContext _bancoContext;
+        public NotasController(INotasRepositorio notasRepositorio, BancoContext bancoContext)
         {
             _notaRepositorio = notasRepositorio;
+            _bancoContext = bancoContext;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
-            if (!string.IsNullOrEmpty(usuarioID) && !string.IsNullOrEmpty(usuarioNome))
-            {
-                string usuarioPrimeiroNome = usuarioNome.Split(' ')[0];
 
-                ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
-                List<NotasModel> notas = _notaRepositorio.ListarNotas(int.Parse(usuarioID));
-                return View(notas);
+            Console.Write("index");
+            try
+            {
+                Console.Write("entrando");
+                if (!string.IsNullOrEmpty(usuarioID) && !string.IsNullOrEmpty(usuarioNome))
+                {
+                    string usuarioPrimeiroNome = usuarioNome.Split(' ')[0];
+                    ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
+
+                    var notas = await _notaRepositorio.ListarNotas(int.Parse(usuarioID));
+                    return View(notas);
+                }
             }
-            return RedirectToAction("Usuario", "Index");
+            catch (Exception erro)
+            {
+                TempData["MensagemErro"] = "Ops! Falha: " + erro.Message;
+                return RedirectToAction("Index", "Usuario");
+            }
+            return RedirectToAction("Index", "Usuario");
+            
         }
-        public IActionResult CriarNota()
+        public async Task<IActionResult> CriarNota()
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
@@ -38,17 +54,26 @@ namespace BlocoDeNotas.Controllers
                 ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
                 return View();
             }
-            return RedirectToAction("Usuario", "Index");
+            return RedirectToAction("Index", "Usuario");
         }
 
-        public IActionResult Excluir(int id)
+        //[HttpPost]
+        public async Task<IActionResult> Excluir(int id)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _notaRepositorio.Excluir(id);
-                    TempData["mensagemSucesso"] = "Nota excluída com sucesso.";
+                    bool excluido = await _notaRepositorio.Excluir(id);
+                    if (excluido)
+                    {
+                        TempData["mensagemSucesso"] = "Nota excluída com sucesso.";
+                    }
+                    else
+                    {
+                        TempData["mensagemErro"] = "Ops! Não foi possível excluir a nota. Tente novamente!";
+                    }
+                    
                 }
             }
             catch (Exception erro)
@@ -60,7 +85,7 @@ namespace BlocoDeNotas.Controllers
         }
 
         [HttpPost]
-        public IActionResult CriarNota(NotasModel nota)
+        public async Task<IActionResult> CriarNota(NotasModel nota)
         {
 
             try
@@ -85,13 +110,13 @@ namespace BlocoDeNotas.Controllers
         }
 
         [HttpPost]
-        public IActionResult Editar(NotasModel nota)
+        public async Task<IActionResult> Editar(NotasModel nota)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _notaRepositorio.Editar(nota);
+                    await _notaRepositorio.Editar(nota);
                     TempData["mensagemSucesso"] = "Nota editada com sucesso.";
                 }
                 else
@@ -108,7 +133,7 @@ namespace BlocoDeNotas.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Carregar(int id)
+        public async Task<IActionResult> Carregar(int id)
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
@@ -117,7 +142,7 @@ namespace BlocoDeNotas.Controllers
             {
                 string usuarioPrimeiroNome = usuarioNome.Split(' ')[0];
                 ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
-                var nota = _notaRepositorio.Selecionar(id);
+                var nota = await _notaRepositorio.Selecionar(id);
                 if (nota == null)
                 {
                     TempData["mensagemErro"] = "Nota não encontrada.";
@@ -125,10 +150,10 @@ namespace BlocoDeNotas.Controllers
                 }
 
                 ViewData["SelectedNota"] = nota;
-                var notas = _notaRepositorio.ListarNotas(int.Parse(usuarioID));
+                var notas = await _notaRepositorio.ListarNotas(int.Parse(usuarioID));
                 return View("Index", notas);
             }
-            return RedirectToAction("Usuario", "Index");
+            return RedirectToAction("Index", "Usuario");
         }
     }
 }

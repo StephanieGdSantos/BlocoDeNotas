@@ -76,6 +76,14 @@
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Supabase": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
+            "Supabase.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

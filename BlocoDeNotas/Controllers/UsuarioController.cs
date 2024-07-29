@@ -4,6 +4,7 @@ using BlocoDeNotas.Repositorio;
 using BlocoDeNotas.Data;
 using Microsoft.AspNetCore.Session;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlocoDeNotas.Controllers
 {
@@ -17,7 +18,7 @@ namespace BlocoDeNotas.Controllers
             _bancoContext = bancoContext;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
@@ -35,12 +36,12 @@ namespace BlocoDeNotas.Controllers
             return View();
         }
 
-        public IActionResult Cadastrar()
+        public async Task<IActionResult> Cadastrar()
         {
             return View();
         }
 
-        public IActionResult DadosPessoais()
+        public async Task<IActionResult> DadosPessoais()
         {
             string usuarioID = HttpContext.Session.GetString("UsuarioID");
             string usuarioNome = HttpContext.Session.GetString("UsuarioNome");
@@ -50,13 +51,13 @@ namespace BlocoDeNotas.Controllers
             {
                 ViewBag.UsuarioID = usuarioID;
                 ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
-                UsuarioModel Usuario = _usuarioRepositorio.Selecionar(int.Parse(usuarioID));
+                UsuarioModel Usuario = await _usuarioRepositorio.Selecionar(int.Parse(usuarioID));
                 return View(Usuario);
             }
             return RedirectToAction("Index", "Usuario");
         }
 
-        public IActionResult Excluir(int id)
+        public async Task<IActionResult> Excluir(int id)
         {
             try
             {
@@ -78,7 +79,7 @@ namespace BlocoDeNotas.Controllers
         }
 
         [HttpPost]
-        public IActionResult Cadastrar(UsuarioModel usuario)
+        public async Task<IActionResult> Cadastrar(UsuarioModel usuario)
         {
             try
             {
@@ -99,28 +100,41 @@ namespace BlocoDeNotas.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(UsuarioModel usuario)
+        public async Task<IActionResult> Login(UsuarioModel usuario)
         {
-            var validacao = _bancoContext.Usuario.Where(a => a.Email.Equals(usuario.Email) && a.Senha.Equals(usuario.Senha)).FirstOrDefault();
-            if (validacao != null)
+            Console.Write("iniciando login");
+            var validacao = await _bancoContext.Usuario.Where(a => a.Email.Equals(usuario.Email) && a.Senha.Equals(usuario.Senha)).FirstOrDefaultAsync();
+            try
             {
-                HttpContext.Session.SetString("UsuarioID", validacao.Id.ToString());
-                HttpContext.Session.SetString("UsuarioNome", validacao.Nome);
-                HttpContext.Session.SetString("UsuarioPrimeiroNome", (validacao.Nome).Split(" ")[0]);
-                return RedirectToAction("Index", "Notas");
+                Console.Write("try");
+                if (validacao != null)
+                {
+                    Console.Write("validando");
+                    HttpContext.Session.SetString("UsuarioID", validacao.Id.ToString());
+                    HttpContext.Session.SetString("UsuarioNome", validacao.Nome);
+                    HttpContext.Session.SetString("UsuarioPrimeiroNome", (validacao.Nome).Split(" ")[0]);
+                    Console.Write("validado");
+                    return RedirectToAction("Index", "Notas");
+                }
+                Console.Write("não validado");
+                TempData["MensagemErro"] = "Login ou senha incorretos.";
+                return RedirectToAction("Index");
             }
-            TempData["MensagemErro"] = "Login ou senha incorretos.";
-            return RedirectToAction("Index");
+            catch (System.Exception erro)
+            {
+                TempData["MensagemErro"] = "Ops! Não foi possível efetuar o login. Para mais detalhes: " + erro.Message;
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
-        public IActionResult Editar(UsuarioModel usuario)
+        public async Task<IActionResult> Editar(UsuarioModel usuario)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _usuarioRepositorio.Editar(usuario);
+                    await _usuarioRepositorio.Editar(usuario);
                     TempData["mensagemSucesso"] = "Dados editados com sucesso.";
                 }
                 else
@@ -138,11 +152,11 @@ namespace BlocoDeNotas.Controllers
             string usuarioPrimeiroNome = usuarioNome.Split(" ")[0];
             ViewBag.UsuarioPrimeiroNome = usuarioPrimeiroNome;
             ViewBag.UsuarioID = usuarioID;
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Notas");
         }
 
 
-        public ActionResult Logout()
+        public IActionResult Logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index");

@@ -1,13 +1,15 @@
-﻿using BlocoDeNotas.Models;
+﻿using BlocoDeNotas.Data;
+using BlocoDeNotas.Models;
+using System.Runtime.InteropServices;
 
 namespace BlocoDeNotas.Repositorio
 {
     public interface INotasRepositorio
     {
-        NotasModel Selecionar(int id);
-        List<NotasModel> ListarNotas(int usuarioID);
-        NotasModel Adicionar(NotasModel nota);
-        NotasModel Editar(NotasModel nota);
-        bool Excluir(int id);
+        Task<NotasModel> Selecionar(int id);    
+        Task<List<NotasModel>> ListarNotas(int usuarioID);
+        Task<NotasModel> Adicionar(NotasModel nota);
+        Task<NotasModel> Editar(NotasModel nota);
+        Task<bool> Excluir(int id);
     }
 }

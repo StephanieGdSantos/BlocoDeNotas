@@ -1,0 +1,249 @@
+html {
+    font-size: 14px;
+    height: 100vh;
+    width: 100vw;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #5D4C30;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+body {
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+a:hover {
+    color: white;
+}
+
+.convite {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+.formulario {
+    width: 700px;
+    height: 400px;
+    display: flex;
+    border-radius: 10px;
+}
+
+.login {
+    background: #FAEFC2;
+    box-shadow: 7px 8px 6px 0px #5d4c304a;
+}
+
+.cadastro {
+    background: #D7D9FA;
+    box-shadow: 7px 8px 6px 0px #5d4c304a;
+}
+
+.conteudo-formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.botao-enter {
+    background: #5D4C30;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 65%;
+    height: 32px;
+    border-radius: 5px;
+}
+
+.titulo-input {
+    color: #5D4C30;
+    font-size: 10pt;
+}
+
+.titulo-login {
+    display: flex;
+    justify-content: center;
+    color: #5D4C30;
+    font-size: 25pt;
+    margin-bottom: 14%;
+}
+
+.titulo-logo {
+    font-size: 28pt;
+    color: #5D4C30;
+}
+
+.botao-convite {
+    background: #C8B699;
+    width: 60%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #D7D9FA;
+    padding: 15px 50px;
+    width: 87%;
+    border-radius: 0 0 0 15px;
+}
+
+.visao-notas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+    background: #FAEFC2;
+    border-radius: 5px;
+    box-shadow: rgb(93 76 48 / 47%) 4px 4px 6px 0px;
+}
+
+.btn-nova-nota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 170px;
+    color: #5D4C30;
+    background: #D7D9FA;
+    font-size: 14pt;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: rgb(93 76 48 / 47%) 2px 3px 6px 0px;
+    flex-direction: row;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .btn-nova-nota:hover {
+        color: #5D4C30;
+    }
+
+.input-nota {
+    border: solid 2px #5D4C30;
+    background: transparent;
+    resize: none;
+    padding: 5px 10px;
+}
+
+.h-ipt-preview {
+    height: 180px;
+}
+
+.w-preview {
+    width: 48%;
+}
+
+.h-ipt-nova-nota {
+    height: 250px;
+}
+
+.w-nova-nota {
+    width: 80%;
+}
+
+.input-titulo {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px #5D4C30;
+    background: transparent;
+    color: #5D4C30;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+    .input-nota:focus, .input-titulo:focus {
+        outline: none;
+    }
+
+.preview-nota {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FAEFC2;
+    color: #5D4C30;
+    padding: 15px 30px;
+    border-radius: 5px;
+    box-shadow: rgb(93 76 48 / 47%) 4px 4px 6px 0px;
+    cursor: pointer;
+    text-decoration: none;
+    height: 50px;
+}
+
+    .preview-nota:hover {
+        color: #5D4C30;
+    }
+
+.voltar {
+    font-weight: bold;
+    color: #5D4C30;
+}
+
+    .voltar:hover {
+        color: #5D4C30;
+    }
+
+.texto-marrom {
+    color: #5D4C30;
+}
+
+.opcoes {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 1rem;
+    visibility: visible;
+    transition: all ease;
+}
+
+    .opcoes a {
+        padding: 10px 20px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #5D4C30;
+    }
+
+        .opcoes a:hover {
+            background: #D7D9FA;
+            color: #5D4C30;
+        }
+
+.mostrar {
+    visibility: hidden;
+}

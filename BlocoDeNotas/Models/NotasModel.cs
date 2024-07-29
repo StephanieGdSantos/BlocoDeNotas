@@ -16,7 +16,5 @@ namespace BlocoDeNotas.Models
         public required string Descricao { get; set; }
         public string DataCriacao { get; set; }
         public int UsuarioId { get; set; } // Chave estrangeira para a tabela Usuario
-
-        //public UsuarioModel Usuario { get; set; }
     }
 }

@@ -10,7 +10,8 @@ builder.Services.AddControllersWithViews();
 // Add database context
 
 builder.Services.AddDbContext<BancoContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
@@ -24,6 +25,7 @@ builder.Services.AddScoped<INotasRepositorio, NotasRepositorio>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 // Adiciona serviços de sessão
 // Add MVC services to the services container.

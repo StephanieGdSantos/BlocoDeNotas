@@ -4,9 +4,9 @@ namespace BlocoDeNotas.Repositorio
 {
     public interface IUsuarioRepositorio
     {
-        UsuarioModel CriarConta(UsuarioModel usuario);
-        UsuarioModel Editar(UsuarioModel usuario);
-        UsuarioModel Selecionar(int id);
-        bool Excluir(int id);
+        Task<UsuarioModel> CriarConta(UsuarioModel usuario);
+        Task<UsuarioModel> Editar(UsuarioModel usuario);
+        Task<UsuarioModel> Selecionar(int id);
+        Task<bool> Excluir(int id);
     }
 }

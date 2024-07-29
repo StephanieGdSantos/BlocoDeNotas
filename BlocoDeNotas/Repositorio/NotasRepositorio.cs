@@ -1,5 +1,6 @@
 ﻿using BlocoDeNotas.Data;
 using BlocoDeNotas.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlocoDeNotas.Repositorio
 {
@@ -10,23 +11,23 @@ namespace BlocoDeNotas.Repositorio
         {
             _bancoContext = bancoContext;
         }
-        public NotasModel Selecionar(int id)
+        public async Task<NotasModel> Selecionar(int id)
         {
-            return _bancoContext.Nota.FirstOrDefault(x => x.Id == id);
+            return await _bancoContext.Nota.FirstOrDefaultAsync(x => x.Id == id);
         }
-        public List<NotasModel> ListarNotas(int usuarioID)
+        public async Task<List<NotasModel>> ListarNotas(int usuarioID)
         {
-            return _bancoContext.Nota.Where(nota => nota.UsuarioId.Equals(usuarioID)).ToList();
+            return await _bancoContext.Nota.Where(nota => nota.UsuarioId.Equals(usuarioID)).ToListAsync();
         }
-        public NotasModel Adicionar(NotasModel nota)
+        public async Task<NotasModel> Adicionar(NotasModel nota)
         {
-            _bancoContext.Nota.Add(nota);
-            _bancoContext.SaveChanges();
+            _bancoContext.Nota.AddAsync(nota);
+            await _bancoContext.SaveChangesAsync();
             return nota;
         }
-        public NotasModel Editar(NotasModel nota)
+        public async Task<NotasModel> Editar(NotasModel nota)
         {
-            NotasModel notaDB = Selecionar(nota.Id);
+            NotasModel notaDB = await Selecionar(nota.Id);
             if (notaDB == null) throw new Exception("Houve um erro na atualização da nota.");
 
             notaDB.Titulo = nota.Titulo;
@@ -34,17 +35,17 @@ namespace BlocoDeNotas.Repositorio
             notaDB.DataCriacao = DateTime.Now.ToString("dd/MM/yyyy");
 
             _bancoContext.Nota.Update(notaDB);
-            _bancoContext.SaveChanges();
+            await _bancoContext.SaveChangesAsync();
             return notaDB;
         }
-        public bool Excluir(int id)
+        public async Task<bool> Excluir(int id)
         {
-            NotasModel notaDB = Selecionar(id);
+            NotasModel notaDB = await Selecionar(id);
 
             if (notaDB == null) throw new Exception("Houve um erro na exclusão do nota.");
 
             _bancoContext.Nota.Remove(notaDB);
-            _bancoContext.SaveChanges();
+            await _bancoContext.SaveChangesAsync();
             return true;
         }
     }
