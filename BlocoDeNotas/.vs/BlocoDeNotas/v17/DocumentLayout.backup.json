@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\stephanie gomes\\documents\\estudos\\blocodenotas\\blocodenotas\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\stephanie gomes\\documents\\estudos\\blocodenotas\\blocodenotas\\repositorio\\notasrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:repositorio\\notasrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\stephanie gomes\\documents\\estudos\\blocodenotas\\blocodenotas\\models\\notasmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:models\\notasmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\stephanie gomes\\documents\\estudos\\blocodenotas\\blocodenotas\\controllers\\notascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:controllers\\notascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\stephanie gomes\\documents\\estudos\\blocodenotas\\blocodenotas\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\stephanie gomes\\documents\\estudos\\blocodenotas\\blocodenotas\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\stephanie gomes\\documents\\estudos\\blocodenotas\\blocodenotas\\views\\notas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:views\\notas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|c:\\users\\stephanie gomes\\documents\\estudos\\blocodenotas\\blocodenotas\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FC556DFB-6BE4-4EAB-989E-2DB992804691}|BlocoDeNotas.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-29T21:52:53.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Views\\Usuario\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuario\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Views\\Usuario\\Index.cshtml",
+              "RelativeToolTip": "Views\\Usuario\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-29T21:17:21.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotasRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Repositorio\\NotasRepositorio.cs",
+              "RelativeDocumentMoniker": "Repositorio\\NotasRepositorio.cs",
+              "ToolTip": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Repositorio\\NotasRepositorio.cs",
+              "RelativeToolTip": "Repositorio\\NotasRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T17:23:47.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotasModel.cs",
+              "DocumentMoniker": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Models\\NotasModel.cs",
+              "RelativeDocumentMoniker": "Models\\NotasModel.cs",
+              "ToolTip": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Models\\NotasModel.cs",
+              "RelativeToolTip": "Models\\NotasModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T17:22:09.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotasController.cs",
+              "DocumentMoniker": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Controllers\\NotasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NotasController.cs",
+              "ToolTip": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Controllers\\NotasController.cs",
+              "RelativeToolTip": "Controllers\\NotasController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAB0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T17:15:58.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Views\\Notas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Notas\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Views\\Notas\\Index.cshtml",
+              "RelativeToolTip": "Views\\Notas\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-28T17:15:47.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAwwA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-28T16:41:37.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Stephanie Gomes\\Documents\\Estudos\\BlocoDeNotas\\BlocoDeNotas\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "wwwroot\\js\\site.js",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-07-28T16:36:02.081Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
